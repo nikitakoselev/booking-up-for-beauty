@@ -67,6 +67,7 @@ func TestDescription(t *testing.T) {
 		"Description 2": {in: "9/19/1994 12:15:00", want: "You have an appointment on Monday, September 19, 1994, at 12:15."},
 		"Description 3": {in: "4/4/2012 16:45:00", want: "You have an appointment on Wednesday, April 4, 2012, at 16:45."},
 	}
+
 	for name, tc := range tests {
 		t.Run(name, func(t *testing.T) {
 			if got := Description(tc.in); got != tc.want {
